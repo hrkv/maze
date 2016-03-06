@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Maze</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        .wrapper {
+            margin: auto;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        
+        .hint {
+            color: #2683A1;
+            font-size: 20px;
+            font-family: monospace;
+        }
+    </style>
+    <script src="maze.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 class="hint">Go through the walls (&#8592 &#8593 &#8594 &#8595)</h2>
+        <div class="mazecontainer"></div>
+    </div>
+    <script>
+        var mazeInstance = new Maze({
+            container: document.querySelector(".mazecontainer")
+        });
+    </script>
+</body>
+</html>
